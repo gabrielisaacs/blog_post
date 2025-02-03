@@ -1,0 +1,419 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(247, 247, 246);
+  font-family: "Open Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 80px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 80px;
+  padding: 0 100px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navlinks {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover:not(.nav_logo, .footer_logo) {
+  opacity: 50%;
+}
+
+.nav_logo {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.nav_logo p {
+  font-size: 1.5rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+.logo_img {
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.page_name {
+  font-size: 2.5rem;
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+main {
+  flex: 3;
+  margin-right: 20px;
+}
+
+article {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-family: "DM Serif Text", serif;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.hBar {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+
+.hBar_shareIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.divide {
+  height: 1px;
+  border: none;
+  background-color: #ccc;
+  margin: 0.5rem 0;
+}
+
+.main_img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.article_content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.article_content ol li {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.article_content ol li:first-child {
+  margin-top: 15px;
+}
+
+.article_content h3 {
+  margin-top: 30px;
+}
+
+.article_content p {
+  margin-top: 15px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+}
+
+.sidebar h3 {
+  font-family: "DM Serif Text", serif;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.sidebar_ref h3 {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar_img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(83, 83, 83, 0.1);
+}
+
+@media (max-width: 480px) {
+  .sidebar_img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.article_content a,
+.copyright a {
+  text-decoration: underline;
+  color: #222222;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.sidebar ul li a:hover,
+.article_content ul li a:hover {
+  opacity: 0.7;
+}
+
+
+
+.sidebar button {
+  width: 100%;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  padding: 15px;
+  border: none;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.sidebar button:hover {
+  box-shadow: 0 0 10px rgba(39, 39, 39, 0.5);
+  opacity: 85%;
+  transition: all;
+  transition-duration: 200ms;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.copyright {
+  font-size: 1rem;
+  margin: auto;
+}
+
+.sidebar ul li {
+  margin-left: 20px;
+}
+
+.sidebar_ref {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.sidebar ul li::before {
+  content: "";
+  border-color: transparent #111;
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.45em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 0.9em;
+  position: relative;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+a span {
+  font-size: 1rem;
+  margin-left: 10px;
+  font-family: "Ubuntu", sans-serif;
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    order: 3;
+  }
+
+  a span {
+    visibility: visible;
+  }
+
+  nav {
+    padding: 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+  }
+
+  .navlinks {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navlinks.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .page_name {
+    display: none;
+  }
+
+  .nav_logo {
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  .nav_logo p {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .sidebar h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  main {
+    margin-right: 0;
+  }
+
+  .sidebar {
+    margin-top: 20px;
+  }
+
+  .hBar_shareIcons {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0 15px;
+  }
+
+  .nav_logo p {
+    font-size: 1rem;
+  }
+
+  .navlinks {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sidebar button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+}
+
+.copyright {
+  font-size: 1rem;
+  margin: auto;
+}
+
+.copyright a {
+  font-style: normal;
+}
+
+.sidebar ul li {
+  margin-left: 20px;
+}
+
+.sidebar_ref {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.sidebar ul li::before {
+  content: "";
+  border-color: transparent #111;
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.45em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 0.9em;
+  position: relative;
+}
